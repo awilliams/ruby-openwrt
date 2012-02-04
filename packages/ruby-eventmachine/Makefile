@@ -30,7 +30,7 @@ define Package/ruby-eventmachine
   SUBMENU:=Ruby
   SECTION:=lang
   CATEGORY:=Languages
-  DEPENDS:=+ruby
+  DEPENDS:=ruby +libstdcpp +libc +libgcc
   TITLE:=Ruby eventmachine gem
 endef
 
