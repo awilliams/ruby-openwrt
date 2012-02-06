@@ -307,6 +307,9 @@ define Package/ruby-core/install
 		$(1)/usr/lib/ruby/$(PKG_LIBVER)/yaml \
 		$(1)/usr/lib/ruby/$(PKG_LIBVER)/yaml.rb \
 		$(1)/usr/lib/ruby/$(PKG_LIBVER)/*/syck.so \
+		\
+                $(1)/usr/lib/ruby/$(PKG_LIBVER)/csv.rb \
+                $(1)/usr/lib/ruby/$(PKG_LIBVER)/mkmf.rb \
 	
 	find $(1) -name '*.h' | xargs rm -f
 endef

@@ -81,7 +81,7 @@ endef
 
 define Package/ruby-eventmachine/install
 	$(INSTALL_DIR) $(1)/usr/lib/ruby/site_ruby/1.9/mips-linux
-	$(CP) $(PKG_BUILD_DIR)/lib/*.rb $(1)/usr/lib/ruby/site_ruby/1.9/
+	$(CP) $(PKG_BUILD_DIR)/lib/eventmachine.rb $(1)/usr/lib/ruby/site_ruby/1.9/
 	$(CP) $(PKG_BUILD_DIR)/lib/em $(1)/usr/lib/ruby/site_ruby/1.9/
 	$(CP) $(PKG_BUILD_DIR)/lib/*.so $(1)/usr/lib/ruby/site_ruby/1.9/mips-linux
 endef
