@@ -21,7 +21,7 @@ define Package/ruby-em-websocket
   SECTION:=lang
   CATEGORY:=Languages
   TITLE:=Ruby em-websocket gem
-  DEPENDS:=+ruby-eventmachine
+  DEPENDS:=+ruby-eventmachine +ruby-enc-utf +ruby-openssl
 endef
 
 RUBY:= \
