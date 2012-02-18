@@ -11,6 +11,6 @@ config wifi-iface
 	option device   radio0
 	option network  lan
 	option mode     ap
-	option ssid     R.Chat
+	option ssid     EmEmChat
 	option encryption none
 
