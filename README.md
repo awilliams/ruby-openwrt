@@ -23,8 +23,8 @@ There are over [2000 packages](http://downloads.openwrt.org/backfire/10.03.1/brc
    * `wget https://raw.github.com/awilliams/ruby-openwrt/master/feeds.conf`
 
  * Update feeds and download packages - [more info here](http://wiki.openwrt.org/doc/howto/build)
-   * `./scripts/update`
-   * `./scripts/install -a`
+   * `./scripts/feeds update -a`
+   * `./scripts/feeds -a`
 
  * Select your corresponding target platform. For the Jazztel HG536+, the target system is *Broadcom BCM63xx*. [Find your target system](http://wiki.openwrt.org/toh/start)
    * `make menuconfig`
