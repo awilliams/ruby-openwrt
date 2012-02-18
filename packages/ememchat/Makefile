@@ -26,6 +26,8 @@ define Package/EmEmChat/install
 	$(CP) $(PKG_BUILD_DIR)/server/* $(1)/root/EmEmChat/
 	$(INSTALL_DIR) $(1)/www
 	$(CP) $(PKG_BUILD_DIR)/www/* $(1)/www/
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) ./files/ememchat.init $(1)/etc/init.d/ememchat
 endef
 
 define Build/Compile

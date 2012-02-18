@@ -1,0 +1,15 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+APP=EmEmChat
+EXEC="ruby"
+EXEC_ARGS="-I /root/EmEmChat/ /root/EmEmChat/server.rb"
+PID_FILE=/var/run/$APP.pid
+
+start() {
+	start-stop-daemon -S -x $EXEC -p $PID_FILE -m -b -- $EXEC_ARGS
+}
+
+stop() {
+	start-stop-daemon -K -p $PID_FILE -s TERM && rm -rf $PID_FILE
+}
