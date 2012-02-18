@@ -9,7 +9,7 @@ There are over [2000 packages](http://downloads.openwrt.org/backfire/10.03.1/brc
  * Standard OpenWrt Ruby 1.9.2-p0 packages, with an additional *ruby-enc-utf* package. This package provides only the UTF encodings, instead of the default *ruby-enc* package (2+MB).
  * [eventmachine](https://github.com/awilliams/eventmachine) - "Fast, simple event-processing library for Ruby programs"
  * [em-websocket](https://github.com/awilliams/em-websocket) - "EventMachine based WebSocket server" (slightly modified removing dependency on Addressable, and modified file encodings) 
- * [EmEmChat](https://github.com/awilliams/EmEmChat) - A server & client chat app using em-websocket and lungo-js
+ * [EmEmChat](https://github.com/awilliams/EmEmChat) - A server & client chat app using em-websocket and lungo.js
 
 ## Usage
 
@@ -64,7 +64,23 @@ There are over [2000 packages](http://downloads.openwrt.org/backfire/10.03.1/brc
  * Create a *files* directory. All files and directories in this folder will be packaged into builds. 
 
 #### SSH
+To make it easier to connect to the router after builds
+ 
+  * In the files folder, create *etc/dropbear/authorized_keys* with your ssh pub key for passwordless login. 
+  * Copy from your router *etc/dropbear/dropbear_dss_host_key* or *dropbear_rsa_host_key* to the corresponding location in files. This will stop the ssh warning from appearing after new builds.
 
- * To make it easier to connect to the router after builds
-   * In the files folder, create *etc/dropbear/authorized_keys* with your ssh pub key for passwordless login. 
-   * Copy from your router *etc/dropbear/dropbear_dss_host_key* or *dropbear_rsa_host_key* to the corresponding location in files. This will stop the ssh warning from appearing after new builds.
+#### Reducing image size
+A few settings can be set to reduce size and many unneeded programs can be removed from BusyBox
+
+ * Under Global build settings
+   * Check Remove ipkg/opkg status data files in final images
+   * Uncheck Compile the kernel with Debug FileSystem enabled
+   * Check Strip unnecessary exports from the kernel image
+ * Under Base system -> busybox -> Configuration
+   * Archival Utilities
+     * Remove all packages
+   * Networking Utilities
+     * ntpd
+     * netstat
+     * telnet
+     * telnetd
