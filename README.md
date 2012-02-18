@@ -9,7 +9,7 @@ There are over [2000 packages](http://downloads.openwrt.org/backfire/10.03.1/brc
  * Standard OpenWrt Ruby 1.9.2-p0 packages, with an additional *ruby-enc-utf* package. This package provides only the UTF encodings, instead of the default *ruby-enc* package (2+MB).
  * [eventmachine](https://github.com/awilliams/eventmachine) - "Fast, simple event-processing library for Ruby programs"
  * [em-websocket](https://github.com/awilliams/em-websocket) - "EventMachine based WebSocket server" (slightly modified removing dependency on Addressable, and modified file encodings) 
- * [EmEmChat](https://github.com/awilliams/EmEmChat) - A server & client chat app using em-websocket and lungo.js
+ * [EmEmChat](https://github.com/awilliams/EmEmChat) - A websocket server & html/javascript client chat app using em-websocket and lungo.js
 
 ### [Build HOWTO](https://github.com/awilliams/ruby-openwrt/wiki)
 
