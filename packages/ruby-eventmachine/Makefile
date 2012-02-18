@@ -1,20 +1,11 @@
 include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/kernel.mk
 
-# PKG_NAME:=ruby-eventmachine
-# PKG_SOURCE_PROTO:=git
-# PKG_SOURCE_URL:=git://github.com/awilliams/eventmachine.git
-# PKG_VERSION:=master
-# PKG_RELEASE:=master
 
 RUBY_PKG_LIBVER:=1.9
 
-# PKG_BUILD_DIR := $(KERNEL_BUILD_DIR)/$(PKG_NAME)
-# PKG_SOURCE:=$(PKG_NAME).tar.gz
-
 PKG_NAME:=ruby-eventmachine
 PKG_RELEASE:=1
-# PKG_REV:=64a949a1ea6308e88e6397032612a1651914a68c
 PKG_REV:=master
 PKG_VERSION:=$(PKG_REV)
 
